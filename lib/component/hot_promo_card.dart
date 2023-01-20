@@ -1,3 +1,5 @@
+import 'package:cflutter4/models/food_model.dart';
+import 'package:cflutter4/pages/detail_food.dart';
 import 'package:flutter/material.dart';
 import 'package:cflutter4/constants.dart';
 import 'package:intl/intl.dart';
@@ -32,7 +34,10 @@ class HotPromoCard extends StatelessWidget {
             child: DefaultTextStyle(
               style: const TextStyle(color: Colors.white),
               child: InkWell(
-                onTap: () {},
+                onTap: () {
+                   Food f = Food(id: 99, title: title, description: description, price: this.discounted.toDouble(), image: image, category: [{"food_id":1,"category_id":1,"category":{"id":1,"title":"Eastern","created_at":"2022-08-26T08:21:22.000000Z","updated_at":"2022-08-26T08:21:22.000000Z"}},{"food_id":1,"category_id":2,"category":{"id":2,"title":"Western","created_at":"2022-08-26T08:21:22.000000Z","updated_at":"2022-08-26T08:21:22.000000Z"}}], imageThumbnail: [image]);
+                  openDetailFood(context, f);
+                },
                 borderRadius: defaultBorderRadius,
                 child: Container(
                   width: 380,
@@ -106,4 +111,13 @@ class HotPromoCard extends StatelessWidget {
       ],
     );
   }
+}
+
+openDetailFood(BuildContext context, Food f) {
+  Navigator.push(
+    context,
+    MaterialPageRoute(
+      builder: (context) => DetailFood(food: f,),
+    ),
+  );
 }

@@ -25,7 +25,6 @@ class FoodController extends GetxController {
       r = await foodRepo.getFood(id);
     }
     _foodList = [];
-    
     _foodList = r.body;
     return _foodList;
   }

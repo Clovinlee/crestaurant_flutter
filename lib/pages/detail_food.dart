@@ -243,15 +243,17 @@ class _DetailFoodState extends State<DetailFood> {
                       //   "subtotal": priceNow,
                       // });
 
-                      cc.store(Cart.fromJson({
-                        "food_id": '${widget.food.id}',
-                        "qty": '${qtyNow.text}',
-                        "subtotal": "${calcPrice()}"
-                      }));
-                      Navigator.pop(context);
+                      // cc.store(Cart.fromJson({
+                      //   "food_id": '${widget.food.id}',
+                      //   "qty": '${qtyNow.text}',
+                      //   "subtotal": "${calcPrice()}"
+                      // }));
+
+                      
+                      // Navigator.pop(context);
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                           content: Text(
-                              "${qtyNow.text} ${widget.food.title}${qtyNow.text == "1" ? "" : "'s"} successfully added to cart!")));
+                              "${qtyNow.text} ${widget.food.title}${qtyNow.text == "1" ? "" : "'s"} successfully added to cart! {FEATURE NOT REAL}")));
                     },
                     style: ElevatedButton.styleFrom(
                       padding: const EdgeInsets.symmetric(vertical: 15),

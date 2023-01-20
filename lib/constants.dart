@@ -11,7 +11,7 @@ class AppConstant {
   static HexColor lightBlue = HexColor("83d8e6");
   static HexColor lightOrange = HexColor("f4a530");
 
-  static String API_URL = "https://mhs.sib.stts.edu/k4nobar/CRestaurant/crestaurant/public/api/";
+  static String API_URL = "https://mhs.sib.stts.edu/k4nobar/CRestaurant/crestaurant_api/public/api/";
   // static String API_URL = "http://127.0.0.1:8000/api";
   static String FOOD_URI = "foods";
   static String HOTFOOD_URI = "foods/hot";

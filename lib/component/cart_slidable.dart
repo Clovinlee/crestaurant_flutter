@@ -48,7 +48,6 @@ class _CartSlidableState extends State<CartSlidable> {
   @override
   Widget build(BuildContext context) {
     void dismissEvent() {}
-    print(widget.cart.subtotal);
     return FutureBuilder(
       future: fc.getFood(id: widget.cart.foodId),
       builder: (BuildContext context, AsyncSnapshot snapshot) {
